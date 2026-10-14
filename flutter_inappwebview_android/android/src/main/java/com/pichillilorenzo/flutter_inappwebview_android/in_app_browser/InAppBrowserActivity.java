@@ -118,9 +118,6 @@ public class InAppBrowserActivity extends AppCompatActivity implements InAppBrow
     WindowCompat.setDecorFitsSystemWindows(getWindow(), false);
     toolbar = findViewById(R.id.toolbar);
     setSupportActionBar(toolbar);
-    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-      getWindow().setStatusBarColor(Color.TRANSPARENT);
-    }
 
     ViewCompat.setOnApplyWindowInsetsListener(toolbar, (v, insets) -> {
       Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.statusBars());
